@@ -3,6 +3,7 @@ import type React from "react"
 import type { Metadata, Viewport } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import { AppProvider } from "@/lib/store"
+import { Analytics } from "@vercel/analytics/react";
 import { APP_NAME, APP_TAGLINE } from "@/lib/types"
 import "./globals.css"
 
@@ -28,13 +29,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  return (
-    <html lang="en" className="dark">
-      <body className={`${geist.className} font-sans antialiased`}>
-        <div className="page-root">
-          <AppProvider>{children}</AppProvider>
-        </div>
-      </body>
-    </html>
-  )
+ return (
+  <html lang="en" className="dark">
+    <body className={`${geist.className} font-sans antialiased`}>
+      <div className="page-root">
+        <AppProvider>{children}</AppProvider>
+      </div>
+
+      <Analytics />
+      
+    </body>
+  </html>
+);
 }
