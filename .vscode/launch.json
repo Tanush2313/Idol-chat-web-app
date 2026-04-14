@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/tanushyadav/Downloads/idol-chat-web-app/lib",
-      "program": "/Users/tanushyadav/Downloads/idol-chat-web-app/lib/build/Debug/outDebug"
+      "cwd": "/Users/tanushyadav/Downloads/idol-chat-web-app",
+      "program": "/Users/tanushyadav/Downloads/idol-chat-web-app/build/Debug/outDebug"
     }
   ]
 }
